@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css?v=1.0.3.1">
+    <link rel="manifest" href="manifest.json">
+    <script src="productos.js?v=1.0.3"></script>
+    <script type="module" src="script.js?v=1.0.3" defer></script>
+
+    <title>Heladería San Ramon</title>
+</head>
+<body>
+    <nav class="navBar">
+        <p style="color: white;">v=1.0.3</p>
+        <ul class="navBarList">
+            <li class="navBarItem"><a class="navBarLink" href="#cafes">Cafes</a></li>
+            <li class="navBarItem"><a class="navBarLink" href="#batidos">Batidos</a></li>
+            <li class="navBarItem"><a class="navBarLink" href="#frios">Frios</a></li>
+            <li class="navBarItem"><a class="navBarLink" href="#especiales">Especiales</a></li>
+            <li class="navBarItem"><a class="navBarLink" href="#postres">Postres</a></li>
+
+            <li class="navBarItem"><button class="navBarLink btnCarrito" onclick="verCarrito()">CARRITO</button></li>
+        </ul>
+        
+        <button class="btnHistorial" onclick="verHistorial()">Historial</button>
+        
+    </nav>
+    <main>
+        <!-- Cafes Section -->
+        <section class="seccion">
+            <h2 class="header" id="cafes">Cafes</h2>
+            <div  class="contenedores" id="contenedorCafes">
+
+            </div>
+        </section>
+
+        <!-- Batidos Section -->
+        <section class="seccion">
+            <h2 class="header" id="batidos">Batidos</h2>
+            <form id="formularioBatidos">
+                <div class="contenedores" id="contenedorBatidos">
+
+                </div>
+                <input type="button" value="AGREGAR" class=" btnAgregar btnAgregarBatidos" onclick="agregarBatido()">
+            </form>
+        </section>
+
+            <!-- Frios Section -->
+        <section class="seccion">
+            <h2 class="header" id="frios">Frios</h2>
+            <div class="contenedores" id="contenedorFrios">
+
+            </div>
+        </section>
+
+        <!-- Especiales Section -->
+        <section class="seccion">
+            <h2 class="header" id="especiales">Especiales</h2>
+            <div class="contenedores" id="contenedorEspeciales">
+
+            </div>
+        </section>
+
+        <!-- Postres Section -->
+        <section class="seccion">
+            <h2 class="header" id="postres">Postres</h2>
+            <div class="contenedores" id="contenedorPostres">
+
+            </div>
+        </section>
+
+        <!-- Venta Emergente-->
+        <div class="mostrarventanaEmergente" id="mostrarVentanaEmergente"> 
+            <div class="ventanaEmergente" id="ventanaEmergente">
+                <div class="tituloVentanaEmergente" id="tituloVentanaEmergente"></div>
+                <div class="opcionesVentanaEmergente" id="opcionesVentanaEmergente">
+                </div>
+                <button class="btnCerrar" onclick="cerrarVentanaEmergente()">Cancelar</button>
+            </div>
+        </div>
+
+        <!-- Carrito -->
+        <div class="mostrarventanaEmergente" id="mostrarCarrito">
+            <div class="ventanaEmergente" id="ventanaEmergente">
+                <h2>Pedido</h2>
+                <table class="tablaCarrito" border="1">
+                    <tr class="tableHeader">
+                        <th class="columnItem"> + </th>
+                        <th class="columnItem"> - </th>
+                        <th class="columnItem">Cant</th>
+                        <th class="columnItem">Bebida</th>
+                        <th class="columnItem">Leche</th>
+                        <th class="columnItem">Saborizante</th>
+                        <th class="columnItem columnaNota">Nota</th>
+                        <th class="columnItem">Eliminar</th>
+                    </tr>
+                    <tbody id="tablaContent">
+                    </tbody>
+                </table>
+                    <input type="text" id="nombreCliente" class="inputEnCarrito" placeholder="Nombre del cliente">
+                    <input type="text" id="notaPedido" class="inputEnCarrito" placeholder="Nota General">
+                    <div class="cheakbox">
+                        <input type="checkbox" id="paraLlevar" name="tipoPedido" value="Para Llevar">
+                        <label for="paraLlevar">Para llevar</label>
+                    </div>
+                    <div class="botonesCarrito">
+                        <button class="btnEnviarCarrito btnsCarrito" id="btnConfirmarEnvio" onclick="enviarPedido()">Enviar Pedido</button>
+                        <button class="btnCerrarCarrito btnsCarrito" onclick="cerrarCarrito()">Cerrar</button>
+
+                    </div>
+            </div>
+        </div>
+
+        <!-- Historial de Pedidos -->
+        <div class="mostrarventanaEmergente" id="mostrarHistorial">
+            <div class="ventanaEmergente" id="ventanaEmergente">
+                <h2>Historial de Pedidos</h2>
+                <table class="tablaCarrito" border="1">
+                    <tr class="tableHeader">
+                        <th>Cantidad</th>
+                        <th>Bebida</th>
+                        <th>Leche</th>
+                        <th>Saborizante</th>
+                        <th>Cliente</th>
+                        <th>Nota</th>
+                    </tr>
+                    <tbody id="tablaContentHistorial">
+                    </tbody>
+                </table>
+                <button class="btnCerrar" onclick="cerrarHistorial()">Cerrar</button>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
