@@ -7,7 +7,7 @@ const productos = {
         { nombre: "Americano ", imagen:"Americano", llevaTamannos: true },
         { nombre: "Capuchino ", imagen:"Capuchino", llevaLeche: true, llevaSaborizantes: true, llevaTamannos: true },
         { nombre: "Mokaccino ", imagen:"Mokaccino", llevaLeche: true, llevaTamannos: true },
-        { nombre: "Latte ", imagen:"Latte", llevaTamannos: true, llevaLeche: true, llevaSaborizantes: true },
+        { nombre: "Latte ", imagen:"Latte", llevaLeche: true, llevaSaborizantes: true },
         { nombre: "Chocolate Caliente ", imagen:"ChocolateCaliente", llevaLeche: true, llevaTamannos: true},
         { nombre: "Espresso ", imagen:"Espresso" },
         { nombre: "Espresso Doble ", imagen:"EspressoDoble" },
@@ -89,7 +89,7 @@ const opcionesHelados = ["Helado","Sin Helado", "Helado Vainilla", "Helado Choco
 const opcionesMatcha = ["Matcha...","Matcha Regular", "Matcha Mango", "Matcha Fresa"];
 const opcionesJugoVerde = ["Jugo Verde en...","En Agua", "En Limonada", "En jugo Naranja"];
 const opcionesSaborizantesNaturales = ["Saborizante Natural","Sin Saborizante", "Piña", "Manzana Verde"];
-const opcionesRefresher = ["Refresher de...","Fresa", "Mango", "Maracuya","Manzana Verde", "Sandia"];
+const opcionesRefresher = ["Refresher de...","Fresa", "Mango", "Maracuya","Arandano", "Manzana Verde", "Sandia"];
 const opcionestoppingsRefresher = ["Topping","Sin topping", "Bubble Fresa", "Bubble Mango", "Bubble Maracuya", "Bubble Arandano", "Bubble Sandia", "Bubble Melocoton", "Bubble Manzana Verde"];
 const opcionesToppingTaro = ["Topping","Sin Topping", "Con Tapioca"];
 const opcionesLimonada = ["Limonada...","Limonada Regular", "Limonada Fresa"];
